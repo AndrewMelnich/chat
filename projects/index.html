@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Уютный чат</title>
+    <style>
+        @import url(./css/auth.css);
+        @import url(./css/chat.css);
+        @import url(./css/main.css);
+    </style>
 </head>
 <body>
-    Привет
+    <div class="wrapper">
+        <div class="hidden">
+            <div class="auth" id="login">
+                <div class="auth__icon">
+                    <img src="./img/svg/auth__icon.svg" alt="">
+                </div>
+                <div class="auth__text">
+                    <div class="auth__text-title">
+                        Авторизация
+                    </div>
+                    <div class="auth__text-desc">
+                        Введите пожалуйста свой ник для дальнейшей авторизации
+                    </div>
+                </div>
+                <div class="auth__input">
+                    <input type="text" data-role="login-name-input" placeholder="Введите свой ник">
+                </div>
+                <button class="auth__btn" data-role="login-submit">ВОЙТИ</button>
+            </div>
+        </div>
+
+        <div id="main" class="hidden">
+            <div class="left-side">
+                <div class="user-info">
+                    <div class="user-photo" data-role="user-photo"></div>
+                    <div class="user-name" data-role="user-name"></div>
+                </div>
     
+                <div class="user-list-container">
+                    <div class="user-list-header">
+                        Все пользователи:
+                    </div>
+
+                    <div class="user-list" data-role="user-list"></div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="messages-container" data-role="messages-list"></div>
+                <div class="input-container" data-role="message-sender">
+                    <input class="message-input" data-role="message-input" type="text" placeholder="сообщение"/>
+                    <button class="send-button" data-role="message-send-button">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./index.js"></script>
 </body>
+
 </html>
